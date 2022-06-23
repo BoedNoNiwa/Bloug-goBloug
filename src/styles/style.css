@@ -1,0 +1,21 @@
+html {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar {
+    width: 6px;
+}
+html::-webkit-scrollbar-track {
+    width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background: #00C5A1;
+    border-radius: 24px;
+}
+.title {
+    margin-top: 2em;
+}
+.title > h1 {
+font-size: 24px;
+font-weight: bold;
+}
