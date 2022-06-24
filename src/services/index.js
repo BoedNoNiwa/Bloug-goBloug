@@ -90,3 +90,17 @@ export const getProjectDetails = async() => {
   const results = await request(graphqlAPI, query);
   return results.projectsConnection.edges;
 }
+
+export const getAuthorDetails = async() => {
+  const query = gql`
+    query getAuthorDetails {
+      authors {
+        bio
+        createdAt
+        name
+      }
+    }
+  `
+  const results = await request(graphqlAPI, query);
+  return results.authors
+}

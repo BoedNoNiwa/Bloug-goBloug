@@ -3,8 +3,9 @@ import { About, Container, DarkModeSwitch, Footer, Navbar, NavBtn, SpotifyNowPla
 import { CgMediaLive } from 'react-icons/cg'
 import { BsMusicNote } from 'react-icons/bs';
 import Head from 'next/head';
+import { getAuthorDetails } from '../../services';
 
-function index() {
+function index({ author }) {
   const navVar = useBreakpointValue({base: <NavBtn/>, md: <Navbar />})
   const cardWidth = useBreakpointValue({base: "2xs", md: "20rem" })
   const picSize = useBreakpointValue({ base: "3.4rem", md: "6.85rem" })
@@ -21,7 +22,9 @@ function index() {
       </Head>
       {navVar}
       <DarkModeSwitch />
-      <About />
+      {author.map((item, index) => (
+        <About author={item} key={index} />
+      ))}
       <Container as="footer" paddingY="5" paddingX="5" marginTop="10" textAlign="center">
         <SimpleGrid columns={[1, null, 2]} gap={4} fontSize="sm" _dark={{color: "white"}} color="black" textAlign="left">
           <Text>
@@ -40,3 +43,10 @@ function index() {
 }
 
 export default index
+
+export async function getStaticProps() {
+  const author = (await getAuthorDetails()) || [];
+  return {
+      props: { author }
+  };
+}
