@@ -17,7 +17,7 @@ function PostDetail({ post }) {
         </Stack>
       </Box>
       <Box>
-        <Text _dark={{ color: 'white' }}>
+        <Text _dark={{ color: 'white' }} letterSpacing="wide">
           {parse(post.content.html)}
         </Text>
       </Box>

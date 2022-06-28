@@ -1,3 +1,4 @@
+
 import { Container, Box, Heading, Image, Text, keyframes, ScaleFade, SlideFade, useBreakpointValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
@@ -16,14 +17,10 @@ function LandingPage() {
   const pictureScale = useBreakpointValue({md: '64', base: '40'})
   const pictureMargin = useBreakpointValue({md: '-16.9em', base: '-44'})
 
-    return (<Container marginTop="24" marginX="auto">
+    return (<Container marginY="24" marginX="auto">
       <SlideFade in={true} offsetY="3em" delay={0.45}>
         <ScaleFade in={true} initialScale={0.5} delay={0.6}>
-          <Box marginX="auto" as={motion.div} animation={animation} 
-    // not work: transition={{ ... }}
-    padding="2" 
-    // @ts-ignore - "Does not exist" Type Error against Motion
-    bgGradient="linear(to-r, #354E54, #00C5A1)" width={gradientScale} height={gradientScale} display="flex"/>
+          <Box marginX="auto" as={motion.div} animation={animation} padding="2" bgGradient="linear(to-r, #354E54, #00C5A1)" width={gradientScale} height={gradientScale} display="flex"/>
         </ScaleFade>
           <Image top="0" left="0" right="0" bottom="0" alt="BoedNoNiwa"
           marginTop={pictureMargin} marginX="auto" boxSize={pictureScale} 
@@ -39,6 +36,7 @@ function LandingPage() {
               <Text color="#9A69BD">Lorem ipsum dolor sit amet.</Text>
           </Box>
       </SlideFade>
+
     </Container>);
 };
 export default LandingPage;

@@ -1,4 +1,4 @@
-import { Flex, Menu, MenuButton, MenuList, MenuItem, IconButton, Button} from '@chakra-ui/react'
+import { Flex, Menu, MenuButton, MenuList, MenuItem, IconButton, Button } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { SiWebpack } from 'react-icons/si'
 import { FaHome, FaPen } from 'react-icons/fa'

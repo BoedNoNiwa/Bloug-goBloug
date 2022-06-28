@@ -41,6 +41,7 @@ export default async (_, res) => {
   
   const song = await response.json();
   const title = song.items[0].track.name;
+  const songUrl = song.items[0].track.external_urls.spotify
   const artist = song.items[0].track.album.artists[0].name;
   const album = song.items[0].track.album.name;
   const albumImageUrl = song.items[0].track.album.images[0].url;
@@ -50,5 +51,6 @@ export default async (_, res) => {
     albumImageUrl,
     artist,
     title,
+    songUrl
   });
 };
