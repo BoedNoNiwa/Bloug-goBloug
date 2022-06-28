@@ -10,8 +10,7 @@ function SpotifyNowPlay({ cardWidth, picSize, textSize, boxHeight }) {
   const { data } = useSWR('/api/spotifyNowPlay', fetcher);
 
   return (
-    <Link href={data?.songUrl}>
-      <a rel='noopener noreferrer' target="_blank">
+      <a href={data?.isPlaying ? data.songUrl : "https://open.spotify.com/user/q0jf7t2xygjttio2aejixuj7e"} rel='noopener noreferrer' target="_blank">
         <Flex as={motion.div}     
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 1 }}
@@ -40,7 +39,6 @@ function SpotifyNowPlay({ cardWidth, picSize, textSize, boxHeight }) {
           </Box>
         </Flex>
       </a>
-    </Link>
   )
 }
 

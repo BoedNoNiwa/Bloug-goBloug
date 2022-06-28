@@ -9,8 +9,7 @@ function SpotifyRecent({ cardWidth, picSize, textSize, boxHeight }) {
   const { data } = useSWR('/api/spotifyRecent', fetcher);
 
   return (
-    <Link href={data?.songUrl}>
-      <a rel='noopener noreferrer' target="_blank">
+      <a href={data?.songUrl} rel='noopener noreferrer' target="_blank">
         <Flex
          as={motion.div}     
          whileHover={{ scale: 1.02 }}
@@ -34,7 +33,6 @@ function SpotifyRecent({ cardWidth, picSize, textSize, boxHeight }) {
             </Box>
         </Flex>
       </a>
-    </Link>
   )
 }
 
