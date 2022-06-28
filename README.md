@@ -1,4 +1,4 @@
-# Blog Website with Next.js, GraphQL, and Chakra UI
+# Blog Website with Next.js, GraphCMS, and Chakra UI
 
 Live Demo
 https://bloug-gobloug.vercel.app
