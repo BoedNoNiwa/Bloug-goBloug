@@ -28,11 +28,11 @@ function index({ author }) {
         <SimpleGrid columns={[1, null, 2]} gap={4} fontSize="sm" _dark={{color: "white"}} color="black" textAlign="center">
           <Text>
            <Icon as={CgMediaLive} /> Now Listening
-            {/* <SpotifyNowPlay textSize={textSize} boxHeight={boxHeight} picSize={picSize} cardWidth={cardWidth} /> */}
+            <SpotifyNowPlay textSize={textSize} boxHeight={boxHeight} picSize={picSize} cardWidth={cardWidth} />
           </Text>
           <Text>
            <Icon as={BsMusicNote} /> Recently Played
-            {/* <SpotifyRecent textSize={textSize} boxHeight={boxHeight}  picSize={picSize} cardWidth={cardWidth} /> */}
+            <SpotifyRecent textSize={textSize} boxHeight={boxHeight}  picSize={picSize} cardWidth={cardWidth} />
           </Text>
         </SimpleGrid>
         <Link href="https://open.spotify.com/user/q0jf7t2xygjttio2aejixuj7e">
