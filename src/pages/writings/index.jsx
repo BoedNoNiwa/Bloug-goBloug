@@ -4,7 +4,6 @@ import { HiPencilAlt } from 'react-icons/hi'
 import { getPosts } from "../../services";
 import Head from "next/head";
 
-
 function index({ posts }) {
   
   return (

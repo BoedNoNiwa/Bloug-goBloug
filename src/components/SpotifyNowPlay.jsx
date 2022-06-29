@@ -1,5 +1,4 @@
 import { Flex, Box, Image, Text, Icon } from '@chakra-ui/react'
-import Link from 'next/link';
 import { FaSpotify } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import useSWR from "swr"
@@ -29,11 +28,11 @@ function SpotifyNowPlay({ cardWidth, picSize, textSize, boxHeight }) {
             )
             }
           </Box>
-          <Box textAlign="center" marginY="auto" marginX="auto">
+          <Box textAlign="center" marginY="auto" marginX="auto" width="3xs">
               <Text fontSize={textSize}>
               {data?.isPlaying ? data?.title : 'Not Listening'}
               </Text>
-              <Text>
+              <Text color="#00A987">
               {data?.isPlaying ? data?.artist : ''}
               </Text>
           </Box>

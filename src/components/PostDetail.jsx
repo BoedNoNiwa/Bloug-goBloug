@@ -3,6 +3,7 @@ import moment from 'moment';
 import parse from 'html-react-parser';
 
 function PostDetail({ post }) {
+  
     return (
       <Box textAlign="left" marginX="10" marginTop="24">
         <Box>

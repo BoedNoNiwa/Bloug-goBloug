@@ -1,13 +1,14 @@
-import { Flex } from "@chakra-ui/react";
-import Head from "next/head";
 import { PostDetail, Footer, Container } from "../../components";
 import { getPostDetails, getPosts } from "../../services";
+import { Flex } from "@chakra-ui/react";
+import Head from "next/head";
 
 const PostDetails = ({ post }) => {
+
     return (
     <Container>
         <Head>
-          <title>{post.title} - Blog goBloug</title>
+          <title>{post.title} - Bloug goBloug</title>
           <link rel="icon" href="https://cdn.discordapp.com/attachments/949216626715279391/953555857524789288/Amogus.png" />
         </Head>
       <Flex direction="column" alignItems="start" justifyContent="flex-start" color="black" _dark={{ color: '#00C5A1' }} 
@@ -17,6 +18,7 @@ const PostDetails = ({ post }) => {
     <Footer />
     </Container>);
 };
+
 export default PostDetails;
 export async function getStaticProps({ params }) {
     const data = await getPostDetails(params.slug);

@@ -1,6 +1,5 @@
 import { Box, Text, Image, Flex } from '@chakra-ui/react'
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import useSWR from 'swr'
 
 function SpotifyRecent({ cardWidth, picSize, textSize, boxHeight }) {
@@ -23,11 +22,11 @@ function SpotifyRecent({ cardWidth, picSize, textSize, boxHeight }) {
                 alt={data?.album} 
                 />
             </Box>
-            <Box textAlign="center" marginY="auto" marginX="auto">
+            <Box textAlign="center" marginY="auto" marginX="auto" maxWidth="3xs">
                 <Text fontSize={textSize}>
                   {data?.title}
                 </Text>
-                <Text>
+                <Text color="#00A987">
                   {data?.artist}
                 </Text>
             </Box>

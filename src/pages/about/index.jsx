@@ -9,11 +9,9 @@ function index({ author }) {
   const cardWidth = useBreakpointValue({base: "2xs", md: "20rem" })
   const picSize = useBreakpointValue({ base: "3.4rem", md: "6.85rem" })
   const boxHeight = useBreakpointValue({ base: "14", md: "28" })
-  const textSize = useBreakpointValue({ base: "sm", md: "xl" })
+  const textSize = useBreakpointValue({ base: "sm", md: "lg" })
 
   return (
-
-
     <Container height="100vh">
       <Head>
         <title>About | Bloug goBloug</title>
