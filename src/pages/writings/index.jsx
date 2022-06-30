@@ -1,11 +1,14 @@
-import { Text, Box, SlideFade, Icon } from "@chakra-ui/react";
+import { Text, Box, SlideFade, Icon, useColorModeValue } from "@chakra-ui/react";
 import { Container, Footer, PostCard } from "../../components";
 import { HiPencilAlt } from 'react-icons/hi'
+import { motion } from "framer-motion";
 import { getPosts } from "../../services";
 import Head from "next/head";
 
 function index({ posts }) {
-  
+
+  const hoverBg = useColorModeValue('', '#00262C')
+
   return (
     <Container height="100vh">
       <Head>
@@ -20,7 +23,12 @@ function index({ posts }) {
           </Text>
           <Box marginTop="10" marginX="auto" paddingX="5">
             {posts.map((post, index) => (
+            <Box _hover={{backgroundColor: hoverBg}} marginY="5" paddingY="3" paddingX="3" borderRadius="2xl" as={motion.div}       
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 1.05 }}
+            transition='0.1s linear'>
               <PostCard key={index} post={post.node}/>
+            </Box>
             ))}
           </Box>
         </SlideFade>

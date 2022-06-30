@@ -1,12 +1,14 @@
-import Head from 'next/head';
-import { getPosts } from '../services';
+import { Text, SlideFade, Icon, useColorModeValue, Box } from '@chakra-ui/react';
 import { Container, Footer, LandingPage, PostCard } from '../components';
-import { Text, SlideFade, Icon } from '@chakra-ui/react';
+import { getPosts } from '../services';
 import { useState } from 'react';
 import { HiPencilAlt } from 'react-icons/hi';
+import { motion } from 'framer-motion';
+import Head from 'next/head';
 
 const Index = ({ posts }) => {
     const [slide, setSlide] = useState(false);
+    const hoverBg = useColorModeValue('', '#00262C')
     
     return (
     <Container height="100vh">
@@ -22,7 +24,10 @@ const Index = ({ posts }) => {
               <Icon as={HiPencilAlt} marginLeft='3' w={7} h={7} color="#008E6E" />
           </Text>
             {posts.slice(0, 3).map((post, index) => (
-              <PostCard key={index} post={post.node}/>
+              <Box _hover={{backgroundColor: hoverBg}} marginY="5" paddingY="3" paddingX="3" borderRadius="2xl" as={motion.div}       
+                   whileHover={{ scale: 1.04 }} whileTap={{ scale: 1.05 }} transition='0.1s linear'>
+                <PostCard key={index} post={post.node}/>
+              </Box>
             ))}
         </SlideFade>
         <Footer />
