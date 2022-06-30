@@ -5,7 +5,6 @@ import { Text, SlideFade, Icon } from '@chakra-ui/react';
 import { useState } from 'react';
 import { HiPencilAlt } from 'react-icons/hi';
 
-
 const Index = ({ posts }) => {
     const [slide, setSlide] = useState(false);
     

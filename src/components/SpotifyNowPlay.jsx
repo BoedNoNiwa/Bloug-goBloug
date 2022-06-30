@@ -16,16 +16,10 @@ function SpotifyNowPlay({ cardWidth, picSize, textSize, boxHeight }) {
         transition='0.1s linear' width={cardWidth} height={boxHeight} borderRadius="xl" justifyContent="space-between" 
         _dark={{border: "1px solid", borderColor:"cyan.500", _hover: {background: "#00262C"}}}>
           <Box>
-            {data?.isPlaying ? (
-              <Image borderTopStartRadius="xl" borderBottomStartRadius="xl" boxSize={picSize}
-              src={data?.albumImageUrl}
-              alt={data?.album} 
-              />
-            ) 
+            {data?.isPlaying ? 
+            (<Image borderTopStartRadius="xl" borderBottomStartRadius="xl" boxSize={picSize} src={data?.albumImageUrl} alt={data?.album} />) 
             : 
-            (
-              <Icon as={FaSpotify} boxSize={picSize} color="green.300" />
-            )
+            (<Icon as={FaSpotify} boxSize={picSize} color="green.300" />)
             }
           </Box>
           <Box textAlign="center" marginY="auto" marginX="auto" width="3xs">
