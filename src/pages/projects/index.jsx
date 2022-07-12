@@ -9,7 +9,7 @@ function Projects({ project }) {
     return (
     <Container height="100vh" >
     <Head>
-        <title>Projects | Bloug goBloug</title>
+        <title>Projects | Bloug Blog</title>
         <link rel="icon" href="https://cdn.discordapp.com/attachments/949216626715279391/953555857524789288/Amogus.png" />
     </Head>
 

@@ -8,7 +8,7 @@ const PostDetails = ({ post }) => {
     return (
     <Container>
         <Head>
-          <title>{post.title} - Bloug goBloug</title>
+          <title>{post.title} - Bloug Blog</title>
           <link rel="icon" href="https://cdn.discordapp.com/attachments/949216626715279391/953555857524789288/Amogus.png" />
         </Head>
       <Flex direction="column" alignItems="start" justifyContent="flex-start" color="black" _dark={{ color: '#00C5A1' }} 

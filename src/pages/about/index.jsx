@@ -14,7 +14,7 @@ function index({ author }) {
   return (
     <Container height="100vh">
       <Head>
-        <title>About | Bloug goBloug</title>
+        <title>About | Bloug Blog</title>
         <link rel="icon" href="https://cdn.discordapp.com/attachments/949216626715279391/953555857524789288/Amogus.png" />
       </Head>
 
